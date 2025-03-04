@@ -1,0 +1,193 @@
+/*
+/* form.css
+*/
+
+@charset "utf-8";
+
+body {
+  margin-top: 50px;
+}
+
+hr {
+  width: 60%;
+  margin: 30px 0;
+}
+
+/* general form */
+/* labels */
+label.ef {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+}
+
+/* select */
+.cp_ipselect {
+  overflow: hidden;
+  width: 40%;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.cp_ipselect select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.cp_ipselect select::-ms-expand {
+  display: none;
+}
+
+.cp_ipselect.cp_sl01 {
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+}
+
+.cp_ipselect.cp_sl01::before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+
+.cp_ipselect.cp_sl01 select {
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+}
+
+/* textbox */
+.cp_iptxt,
+.defaulturl {
+  position: relative;
+  width: 70%;
+  margin: 0;
+}
+
+.buttonarea {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.operationarea {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.operationarea button {
+  margin: 10px auto;
+}
+
+#reservation {
+  display: flex;
+}
+
+#reservation button {
+  margin: 10px auto;
+}
+
+/* imagepath */
+#imagepath {
+  font-size: 0.9em;
+}
+
+/* imagearea */
+#imgbtn {
+  margin: 20px 0;
+  display: flex;
+}
+
+#addText {
+  margin-top: 5px;
+}
+
+#regbtn {
+  margin: 30px 0;
+}
+
+.displaytextarea {
+  width: 75%;
+  margin: 10px 0;
+}
+
+#formTable {
+  width: 70%;
+  margin: 20px auto;
+  border: solid 1px #CCC;
+  border-collapse: collapse;
+}
+
+#formTable tr th {
+  padding: 5px 5px;
+  border: solid 1px #FFF;
+  background-color: #006AB6;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #fff;
+}
+
+#formTable tr td {
+  padding: 5px 5px;
+  border: solid 1px #CCC;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#formTable tr th {
+  height: 45px;
+  text-align: center;
+}
+
+#formTable tr td {
+  height: 45px;
+  text-align: center;
+}
+
+#formTable tr td:first-child {
+  font-weight: bold;
+}
+
+#formTable tr td button {
+  margin: auto;
+}
+
+#formTable tr td input {
+  width: 95%;
+  height: 40px;
+}
+
+#formTable tr td select {
+  width: 95%;
+  height: 40px;
+}
+
+#formTable tr td textarea {
+  width: 95%;
+}
+
+.table-wrapper {
+  width: 100%;
+}

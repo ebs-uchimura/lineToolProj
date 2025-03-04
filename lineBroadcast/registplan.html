@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>LINE自動配信ツール</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <h2>プラン登録</h2>
+  <div id='table-wrapper' class='table-wrapper'>
+    <table id='formTable'>
+      <tr>
+        <th><h3>項目名</h3></th>
+        <th colspan="2">選択</th>
+      </tr>
+      <tr>
+        <td><h3>プラン名</h3></td>
+        <td colspan="2">
+          <input type="text" name="planname" id="planname" placeholder="">
+        </td>
+      </tr>
+      <tr>
+        <td><h3>ジャンル</h3></td>
+        <td colspan="2">
+            <select id="genre-select" required>
+            <option value="">--ジャンル選択--</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><h3>配信タイプ</h3></td>
+        <td colspan="2">
+          <select id="linemethod-select" onchange="linemethodchange(this);">
+            <option value="">--配信タイプ選択--</option>
+          </select>
+        </td>
+      </tr>
+      <tr id="selectimagearea" class="imagerow">
+        <td><h3>画像操作</h3></td>
+        <td colspan="2">
+          <button id="single" class="button-g button-wide" value="upload" onclick="upload(false)">画像選択</button>
+        </td>
+      </tr>
+      <tr id="clearimagearea" class="imagerow">
+        <td><h3>画像クリア</h3></td>
+        <td colspan="2">
+          <button id="clear" class="button-g button-8 button-wide" value="clear" onclick="clearUpload()">画像クリア</button>
+        </td>
+      </tr>
+      <tr id="defaultransferarea" class="imagerow">
+        <td><h3 id="defaulturlhead">標準遷移先URL</h3></td>
+        <td colspan="2">
+          <input id="defaulturl" type="text" name="baseurl" placeholder="">
+        </td>
+      </tr>
+      <tr id="displaytextarea" class="imagerow displaytextarea">
+        <td><h3 class="displaytext">表示テキスト</h3></td>
+        <td colspan="2">
+          <textarea id="plantextarea" name="plantext" class="plantext" rows="5" placeholder=""></textarea>
+        </td>
+      </tr>
+      <tr id="displayurltarea" class="imagerow displayurltarea">
+        <td><h3 class="displayurl">遷移先URL</h3></td>
+        <td colspan="2">
+          <input type="text" name="planurl" class="planurl" placeholder="">
+        </td>
+      </tr>
+    </table>
+    <div class='buttonarea'>
+      <div class='operationarea'>
+        <button class="button-g button-4 button-middle" value="register" onclick="planregister(event)">プラン登録</button>
+        <button id="clearform" class="button-g button-8 button-middle" value="clearform" onclick="clearform()">フォームクリア</button>
+      </div>
+      <div class='operationarea'>
+        <button type="button" id="topbutton" class="topbutton button-g button-6 button-middle" role="button"
+        onclick="transfer('top_page');">トップへ戻る</button>
+        <button class="button-g button-10 button-middle" value="exit" onclick="exitApp();">終了</button>
+      </div>
+    </div>
+  </div>
+  <script src="./build/common.js"></script>
+  <footer>
+    <p><small>&copy; 2025 Satsuma Ebisudo All Rights Reserved. </small></p>
+  </footer>
+</body>
+
+</html>

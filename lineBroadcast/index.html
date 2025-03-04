@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LINE自動配信ツール</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <h1>LINE自動配信ツール</h1>
+  <div class="buttonarea">
+    <div class="operation_area">
+      <h3>配信</h3>
+      <button class="button-g button-wide" value="immediate" onclick="transfer('immediate_page');">即時配信</button>
+    </div>
+    <div class="operation_area">
+      <h3>マスタ追加</h3>
+      <button class="button-g button-4 button-wide" value="plan" onclick="transfer('regist_plan_page');">プラン追加</button>
+      <button class="button-g button-4 button-wide" value="genre" onclick="transfer('regist_genre_page');">ジャンル追加</button>
+      <button class="button-g button-4 button-wide" value="channel" onclick="transfer('regist_channel_page');">チャンネル追加</button>
+    </div>
+    <div class="operation_area">
+      <h3>マスタ削除</h3>
+      <button class="button-g button-8 button-wide" value="plan" onclick="transfer('delete_plan_page');">プラン削除</button>
+      <button class="button-g button-8 button-wide" value="genre" onclick="transfer('delete_genre_page');">ジャンル削除</button>
+      <button class="button-g button-8 button-wide" value="channel" onclick="transfer('delete_channel_page');">チャンネル削除</button>
+    </div>
+    <div class="operation_area">
+      <h3>履歴確認</h3>
+      <button class="button-g button-2 button-wide" value="history" onclick="transfer('history_page');">配信履歴</button>
+    </div>
+  </div>
+  <div class="operation_area">
+    <button class="button-g button-6 button-wide" value="exit" onclick="exitApp();">終了</button>
+  </div>
+  <script src="./build/common.js"></script>
+  <footer>
+    <p><small>&copy; 2025 Satsuma Ebisudo All Rights Reserved. </small></p>
+  </footer>
+</body>
+
+</html>
